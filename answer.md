@@ -1,0 +1,13 @@
+//SOAL
+1.	Jelaskan apa yang dimaksud dengan container pada docker !
+2.	Jelaskan apa perbedaan antara konsep container dengan virtual machine !
+3.	Apa yang dimaksud dengan docker file ?
+4.	Apa yang dimaksud dengan docker registery ?
+5.	Jelaskan bagaimana cara untuk menjalankan lebih dari 1 container secara bersamaan dan saling terhubung !
+
+//JAWABAN
+1.	Container adalah instansi dari Docker image yang bisa dijalankan dengan perintah Docker. Container terdiri dari keseluruhan runtime environment: aplikasi, dependency, library, binary, serta konfigurasi file yang dibutuhkan untuk menjalankannya. Semua dikemas ke dalam satu paket. Dengan bawaannya, container bisa menjadi solusi masalah bagaimana membuat software berjalan dengan benar ketika dipindahkan dari satu computation environment ke yang lain. Bisa dari laptop developer ke test environment, dari staging environment ke production, dan bahkan dari perangkat fisik di dalam data center ke virtual machine di cloud pribadi atau publik. 
+2.	Dengan teknologi virtualisasi, paket yang diedarkan adalah virtual machine yang mencakup seluruh sistem operasi serta aplikasi. Server fisik yang menjalankan tiga virtual machine akan memiliki hypervisor dan tiga sistem operasi terpisah yang berjalan di atasnya. Sebaliknya, server yang menjalankan tiga aplikasi container dengan Docker hanya memiliki satu sistem operasi, dan setiap container berbagi kernel sistem operasi dengan container lainnya. Bagian yang dibagi-bagi tersebut hanya dapat dibaca, sementara setiap container memiliki mount sendiri untuk menulis. Dapat dilihat kalau container jauh lebih ringan dan menggunakan sumber daya yang jauh lebih sedikit daripada virtual machine.
+3.	Docker file adalah file teks yang berisikan semua perintah untuk membentuk gambar. Perintah-perintahnya seperti FROM, PULL, RUN, dan CMD—dengan masing-masing berfungsi untuk membuat layer, menambahkan file ke dalam repo Docker, membangun container, dan menspesifikasikan perintah ke dalam container. Docker file juga memiliki beberapa keuntungan. Yang pertama, dibanding menyimpan gambar/snapshot/template di virtual machine adalah sistem otomatisasi yang meyakinkan developer menggunakan versi terbaru. Yang kedua, dari segi keamanan, developer tidak perlu menginstall software yang rentan dengan serangan-serangan di luar. Yang ketiga, docker file memungkinkan fleksibilitas dan portabilitas untuk aplikasi bisnis.
+4.	Docker registry adalah tempat untuk menyimpan dan mendistribusikan Docker image. Docker registry bisa dihost oleh pihak ketiga sebagai pribadi atau publik; seperti Docker Hub, Quay, Google Container Registry, dan AWS Container Registry. Dengan registry, commit workflow menjadi lebih mudah tanpa harus dilakukan manual.
+5.	
